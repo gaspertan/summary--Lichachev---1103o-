@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Contents</title>
+    <link rel="stylesheet" href="/basic-github.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Логотип">
+        <h1>лихачев игорь</h1>
+        <h2>1103</h2>
+        <h2>людмила</h2>
+    </header>
+
+    <main >
+        <h1>GitHub</h1>
+        <section class="bloc">
+            <h3><a href="index.html">на главную</a></h3>
+        </section>
+
+        <section>
+    <h3>GitHub:</h3>
+    <p>- Объяснение: GitHub - это платформа хостинга, хранения и совместной разработке. Здесь разработчики могут хранить свои проекты, работать над ними в команде, самостоятельно, параллельно и отслеживать изменения, обновления.
+    </p>
+    <p>- Аналогия: GitHub, как облачное хранилище проектов, подобен социальной сети для разработчиков, где они вместе строят и совершенствуют свои творения.
+    </p>
+        </section>
+
+        <section>
+            <h3>SSH-ключ:</h3>
+            <p>- Объяснение: SSH-ключ - это способ безопасной аутентификации (подключение) на удаленном (облачном) сервере. Он используется для подключения к GitHub, например, без постоянного ввода пароля.
+            </p>
+            <p>- Аналогия: SSH-ключ, как сканер отпечатка пальца, позволяет вам разблокировать устройство (подключаться к серверу) без необходимости запоминать пароль.</p>
+        </section>
+
+        <section>
+            <h3>Репозиторий:</h3>
+            <p>  - Объяснение: Репозиторий - это место, где хранится код проекта, вместе со всей его историей изменений.
+            </p>
+            <p>- Аналогия: Репозиторий, как папка с проектом, подобен архиву, где хранятся все чертежи, планы и изменения к вашему главному творению.
+            </p>
+        </section>
+
+        <section>
+            <h3>Коммит:</h3>
+            <p>- Объяснение: Коммит - это сохранение изменений в коде проекта. Он создает точку в истории, которую можно сохранить и вернуться к ней.
+            </p>
+            <p>  - Аналогия: Коммит, как сохранение в игре, фиксирует текущее состояние, чтобы в случае чего можно было вернуться к нему.
+            </p>
+        </section>
+        
+        <section>
+            <h3>Ветка:</h3>
+            <p>  - Объяснение: Ветка - это отдельная линия разработки, которая может быть создана для работы над новой версией (функцией) или исправлением, не затрагивая основной код проекта.
+            </p>
+            <p> - Аналогия: Ветка, как отдельный поток в разговоре, позволяет вам обсуждать и вносить изменения, не прерывая основной диалог.
+            </p>
+        </section>
+        <section>
+         <ol>
+            <li>
+                <h4>Как сгенерировать SSH-ключ и добавить к себе на GitHub:</h4>
+        </li> 
+            <ul>
+                <li>Шаги:</li> 
+                <ol>
+                    <li>Откройте терминал и выполните <div class="block"> <p class="command">ssh-keygen -t rsa -b 4096 </p></div></li>
+                    <li>Нажмите Enter, чтобы принять стандартное расположение файла.</li>
+                    <li>Введите пароль или нажмите Enter, чтобы оставить его пустым.</li>
+                    <li>Выполните <div class="block"> <p class="command">cat ./.ssh/id_rsa.pub, </p> <p class="commit">чтобы скопировать (ПКМ) открытый ключ.</p></div>
+                    </li>
+                    <li>Перейдите в настройки <div class="block"> <p class="argummet">>GitHub -> SSH and GPG keys -> New SSH key -> вставьте ключ.</p>
+                    </div></li>
+                </ol>
+            </ul>
+        <li>
+           <h4>Как добавить к себе чей-то репозиторий:</h4>
+        </li>
+        <ul>
+            <li>Шаги:</li> 
+            <ol>
+                <li>Скопируйте <div class="block"> <p class="command">URL  </p><p class="commit">репозитория с GitHub (зеленая кнопка Code). </p> </div></li>
+                <li>В терминале выполните <div class="block"> <p class="command"> git clone</p><p class="argummet"> URL репозитория.</p></div></li>
+            </ol>
+        </ul>
+        <li> 
+            <h4>Как добавить на свой GitHub склонированный репозиторий:</h4>
+        </li>
+        <ul>
+            <li>Шаги</li>
+            <ol>
+                <li>Создайте пустой репозиторий на GitHub.
+                </li>
+                <li>Скопируйте его <div class="block"> <p class="commit">SSH-ссылку.</p></div></li>
+                <li>Войдите в директорию склонированного репозитория в терминале (например, вы склонировали репозиторий Николая).
+                </li>
+                <li>Выполните <div class="block"> <p class="command">git remote set-url origin <p class="argummet">>SSH-link.</p></div></li>
+                    <li>выполните <div class="block"><p class="command">git push.</p></div></li>
+            </ol>
+        </ul>
+        <li><h4>Как сохранить изменения на GitHub (сделать коммит):</h4></li>
+        <ul>
+            <li>шаги</li>
+            <ol>
+                <li>выполните <div class="block"> <p class="command">git add -A/ git add - -all,</p> <p class="commit">чтобы добавить все изменения. </p> </div></li>
+                <li>выполните <div class="block"> <p class="command">git commit -m  </p> <p class="commit">"Описание коммита".</p></div></li>
+                <li> выполните <div class="block"><p class="command">git push  </p> <p class="commit">чтобы отправить изменения на GitHub.</p></div></li>
+            </ol>
+        </ul>
+        <li><h4>Как работать со своим репозиторием с другого устройства:</h4></li>
+        <ul>
+            <li>шаги</li>
+            <ol>
+                <li>Склонируйте свой репозиторий с GitHub на другое устройство: <div class="block"><p class="command">git clone</p><p class="argummet"> URL вашего репозитория.</p></div></li>
+                <li>Вносите изменения, коммитите и отправляйте их обратно на GitHub.
+                </li>
+            </ol>
+        </ul>
+        <li><h4> Как открыть VSCode из терминала Linux:</h4></li>
+        <ul>
+            <li>шаги</li>
+            <ol>
+                <li>* VSCode - cmd+Shift+P - “shell” - для Mac</li>
+                <li>В терминале выполните <div class="block"><p class="command">code </p> <p class="argummet">имя-файла(папки).</p> <p class="commit"> для открытия текущего каталога в VSCode.</p></div>
+                </li>
+            </ol>
+        </ul>
+
+
+        <li><h4>Как запустить программу в терминале (через Node.js):</h4></li>
+         <ul>
+            <li>шаги</li>
+            <ol>
+                <li>введите <div class="block"><p class="command">node</p> <p class="argummet">имя_файла.js,</p> <p class="commit">тобы выполнить программу Node.js в терминале.</p></div>
+                </li>
+            </ol>
+         </ul>
+        <li><h4>Как создать ветку:</h4></li>
+        <ul>
+            <li>шаги</li>
+            <ol>
+                <li>выполните <div class="block"><p class="command">git branch </p> <p class="commit">новая_ветка,чтобы создать новую ветку.</p></div></li>
+                <li>выполните <div class="block"> <p class="command">git checkout </p> <p class="commit">новая_ветка чтобы переключиться на новую ветку.</p></div>
+                </li>
+                <li>Или используйте <div class="block"><p class="command">git checkout -b </p><p class="commit">новая_ветка для создания и переключения на новую ветку сразу.</p></div>
+                </li>
+            </ol>
+        </ul>
+        </ol>
+
+
+        </section>
+    </main>
+
+    <footer class="footer-content">
+        <div class="footer-right">
+            <p>Дата создания: [дата]</p>
+        </div>
+        <div class="footer-left">
+            <a href="https://hexlet.io" target="_blank">
+                <span>Хекслет</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
